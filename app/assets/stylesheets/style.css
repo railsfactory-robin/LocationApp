@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+body {
+  position: relative;
+}
+header{
+	width: 100%;
+	background-image: url("banner.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.header-text{
+	margin: 190px auto 15px;
+}
+.location-search{
+	margin-bottom: 85px;
+}
+.logo h2{
+	color: #3ac9d9;
+	display: inline;
+}
+.logo h1{
+	color: #fff;
+	display: inline;
+}
+.location-search .form-control{
+	height: 40px;
+}
+.location-search .form-control {
+    border-radius: 0;
+}
+.location-search .form-group:first-child .form-control{
+	border-radius: 5px 0px 0px 5px;
+}
+.btn-download{
+	background-color: #3ac9d9;
+	color: #fff;
+	font-weight: 800;
+ 	padding: 9px 25px;
+ 	border-radius: 0 5px 5px 0px;
+}
+.location-search [class*="col-"] {
+    padding: 0;
+}
+.header-text h2{
+	color: #fff;
+	font-weight: 600;
+}
+.navbar{
+	width: 90%;
+}
+.blue-line{
+	border-bottom: 3px solid #3ac9d9;
+	margin-bottom: 10px;
+	width: 100px;
+}
+.top-bottom-space{
+	margin:20px auto;
+}
+.head-menu{
+	position: fixed;
+	left: 0;
+	z-index: 1;
+	right: 0;
+	top: 0;
+	padding: 13px 36px;
+}
+.header-overlay{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	background: #000;
+	height: 80px;
+	opacity: 0.5;
+}
+.navbar-default {
+    background-color: transparent;
+    border: none;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #3ac9d9;
+    font-size: 13px;
+    font-weight: 600;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    color: #fff;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+.portfolio h5{
+	display: inline;
+	float: left;
+}
+.portfolio h6{
+	display: inline;
+	float: right;
+}
+.portfolio-wrapper{
+	background-color: #fff;
+	padding: 10px;
+}
+.portfolio-main,.contact-us{
+	background-color: #f4f4f4;
+}
+.portfolio img{
+	width: 100%;
+}
+.portfolio{
+	margin-bottom: 20px;
+	position: relative;
+}
+.service-box{
+	border: 1px solid;
+	padding: 15px;
+	position: relative;
+}
+/*.mid-line{
+	border: 0.5px solid gray;
+	width: 90px;
+	margin: 8px auto;
+}*/
+.mid-line{
+	position: relative;
+}
+.mid-line:after{
+	content: "";
+    position: absolute;
+    width: 90px;
+    height: 2px;
+    background: gray;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -7px;
+}
+.service-box h3{
+	font-size: 18px;
+}
+.btn-squre{
+	border-radius: 0;
+	background-color: #716F6F;
+	color: #fff;
+}
+.btn.focus, .btn:focus, .btn:hover{
+	color: #000;
+}
+.address{
+	margin: 20px auto;
+}
+.form .form-control{
+	border-radius:0; 
+	padding: 20px 5px;
+}
+.contact-info{
+	margin-bottom: 20px;
+}
+.btn-big{
+	padding: 12px 18px;
+	background-color: #3ac9d9;
+	font-weight: 800;
+	color: #fff;
+	margin-left:13px; 
+}
+.footer{
+	background-color: #3ac9d9;
+	text-align: center;
+	margin: 10px auto 0;
+	padding: 20px 0;
+	color: #fff;
+}
+.menu-bar{
+	margin:25px auto;
+ }
+ .about-us{
+ 	background-color: #fafafa;
+ }
+ .about-us-image{
+ 	width: 100%;
+ 	margin-top: 30px;
+ }
+ .about-us-image img{
+ 	width: 100%
+ }
+ .about-us-text{
+ 	margin-bottom: 16px;
+ }
+ .about-us-text h4{
+ 	color: #333333;
+ }
+.about-us-text p, .about-us-description p{
+	color: #b2b2b2;
+}
+.portfolio-text{
+	margin-bottom: 20px;
+}
+.portfolio-text h4{
+	color: #333333;
+}
+.portfolio-text p{
+	color: #b2b2b2;
+}
+.over-wrapper{
+	background-color: black;
+	opacity: 0;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 55px;
+}
+.service-box:hover .mid-line{
+	border-color:#333;
+}
+.service-box:hover .btn{
+	 background:#fff;
+	 color:#333;
+}
+.service-box:hover{
+	background-color: #3ac9d9;
+	color:#FFF;
+}
+.over-wrapper button{
+	margin: 124px auto;
+    padding: 10px;
+    background: none;
+    color: white;
+    border: 3px solid #fff;
+    font-weight: 600;
+}
+ .services{
+ 	background-color: #fafafa;
+ }
+ .services-text h4{
+ 	color: #333333;
+ }
+ .services-text p{
+ 	color: #b2b2b2;
+ }
+ .contact-info h4{
+ 	color: #333333;
+ }
+ .contact-info p{
+ 	color: #b2b2b2;
+ }
+ .contact-address h5{
+ 	color: #333333;
+ }
+ .contact-address p,h6{
+ 	color: #b2b2b2;
+ }
+.over-wrapper:hover {
+    opacity: 0.7;
+}

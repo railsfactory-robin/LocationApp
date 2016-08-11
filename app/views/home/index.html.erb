@@ -1,0 +1,293 @@
+<header id="home">
+  <div class="head-menu">
+    <div class="container">
+      <div class="row ">
+      <div class="header-overlay"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 logo">
+          <h2>LOOK Around</h2><h1>.</h1>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="navbar-example">
+          <nav class="navbar navbar-default pull-right">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#home">HOME</a></li>
+              <li><a href="#about-us">ABOUT US</a></li>
+              <li><a href="#portfolio">PORTFOLIO</a></li>
+              <li><a href="#services">SERVICES</a></li>
+              <li><a href="#contact-us">CONTACT US</a></li>
+            </ul>
+          </nav>  
+        </div>
+      </div>
+    </div>  
+  </div>  
+    <div class="container"> 
+      <div class="row header-text">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+          <h2>THE ULTIMATE COLLECTION OF FREE PSD TEMPLATES!!</h2>
+          <!-- <button class="btn btn-download" data-toggle="modal" data-target="#myModal">DOWNLOAD</button> -->
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+      </div>
+       <div class="row location-search">
+         <div class="col-sm-3 col-sm-offset-1 form-group">
+           <input value="data.location" ng-model="data.location" class="form-control" type="text" name="location" placeholder="Enter City" id="location"/>
+         </div>
+         <div class="col-sm-3 form-group">
+        <select ng-init="getCategoryList()" class="form-control" ng-model="data.category"  ng-change="locationData(data);">
+           <option value="">---Please select---</option>
+           <option ng-repeat="cat in category" value="{{cat}}">{{cat}}</option>
+         </select>
+         <%#= select_tag "category", options_for_select(get_category_list),{prompt: "--select county--",class: "form-control"}%>
+        
+          </div>
+         <div class="col-sm-3 form-group">
+          <input type="text" ng-model="data.keyword" name="search" class="form-control" placeholder="Search Key" />
+         </div>
+         <div class="col-sm-2">
+          <button class="btn btn-download" ng-click="locationData(data)">Search</button>
+         </div>
+      </div>
+    </div>
+    
+  </header>
+  <section class="content">
+    <div class="about-us" id="about-us">
+      <div class="container">
+          <div class="row top-bottom-space">
+              <div class="col-sm-offset-3 col-sm-6 col-xs-12 text-center about-us-text">
+                <h4>ABOUT US</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout. </p>
+              </div>  
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="about-us-image">
+                <img src="assets/about_us.jpg">
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="about-us-description">
+                <h5>LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING</h5>
+                <div class="blue-line"></div>
+                <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout.Lorem Ipsum is layout.Lorem is a lo by the readable Ipsum is its layout.Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the page when looking at its layout.Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout is a lo by the readable is a lo by the readable.</p>
+                <button class="btn btn-download">GETTING STARTED</button>
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>  
+      <div class="portfolio-main" id="portfolio">
+        <div class="container">
+          <div class="row top-bottom-space">
+            <div class="col-sm-offset-3 col-sm-6 col-xs-12 text-center portfolio-text">
+              <h4>PORTFOLIO</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout. </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="portfolio">
+                <div class="over-wrapper text-center">
+                  <button>READ MORE</button>
+                </div>
+                <img src="assets/portfolio6.jpg">
+                <div class="portfolio-wrapper clearfix">
+                  <h5><b>PROJECT ONE</b></h5>
+                  <h6><i>Web desin</i></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="portfolio">
+                <div class="over-wrapper text-center">
+                  <button>READ MORE</button>
+                </div>
+                <img src="assets/portfolio1.jpg">
+                <div class="portfolio-wrapper clearfix">
+                  <h5><b>PROJECT TWO</b></h5>
+                  <h6><i>Logo</i></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="portfolio">
+                <div class="over-wrapper text-center">
+                  <button>READ MORE</button>
+                </div>
+                <img src="assets/portfolio2.jpg">
+                <div class="portfolio-wrapper clearfix">
+                  <h5><b>PROJECT THREE</b></h5>
+                  <h6><i>Photo</i></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="portfolio">
+                <div class="over-wrapper text-center">
+                  <button>READ MORE</button>
+                </div>
+                <img src="assets/portfolio5.jpg">
+                <div class="portfolio-wrapper clearfix">
+                  <h5><b>PROJECT ONE</b></h5>
+                    <h6><i>Web desin</i></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="portfolio">
+                <div class="over-wrapper text-center">
+                  <button>READ MORE</button>
+                </div>
+                <img src="assets/portfolio4.jpg">
+                <div class="portfolio-wrapper clearfix">
+                  <h5><b>PROJECT ONE</b></h5>
+                    <h6><i>Web desin</i></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="portfolio">
+                <div class="over-wrapper text-center">
+                  <button>READ MORE</button>
+                </div>
+                <img src="assets/portfolio3.jpg">
+                <div class="portfolio-wrapper clearfix">
+                  <h5><b>PROJECT ONE</b></h5>
+                    <h6><i>Web desin</i></h6>
+                </div>
+              </div>
+            </div>    
+          </div>
+        </div>  
+      </div>
+      <div class="services" id="services">
+        <div class="container">
+          <div class="row top-bottom-space">
+            <div class="col-sm-offset-3 col-sm-6 col-xs-12 text-center services-text">
+              <h4>SERVICES</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout. </p>
+            </div>
+          </div>
+          <div class="row top-bottom-space text-center">  
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="service-box">
+                <img src="assets/cam.png" width="35" height="25">
+                <h3 class="mid-line">PHOTOGRAPHY</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking content at its layout content. </p>
+                <button class="btn btn-squre">READ MORE</button>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="service-box">
+                <img src="assets/brush.png" width="35" height="25">
+                <h3 class="mid-line">PAINTING</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking content at its layout content. </p>
+                <button class="btn btn-squre">READ MORE</button>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="service-box">
+                <img src="assets/sic.png" width="35" height="25">
+                <h3 class="mid-line">VIDEO EDITING</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking content at its layout content. </p>
+                <button class="btn btn-squre">READ MORE</button>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="service-box">
+                <img src="assets/s.png" width="35" height="25">
+                <h3 class="mid-line">WEB DESIGN</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking content at its layout content. </p>
+                <button class="btn btn-squre">READ MORE</button>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="contact-us" id="contact-us">
+        <div class="container">
+          <div class="row top-bottom-space">
+            <div class="col-sm-offset-3 col-sm-6 col-xs-12 text-center contact-info">
+              <h4>CONTACT US</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout. </p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="contact-address">
+                <h5>CONTACT INFO</h5>
+                <div class="blue-line"></div>
+                <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout.Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout.Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout.Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout.</p>
+                <h5 class="address">Address</h5>
+                <h6>ROBIN THOMAS</h6>
+                <h6>SEDIN TECHNOLOGY</h6>
+                <h6>09535787496</h6>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <form class="form">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <div class="form-group">
+                    <input type="text" name="name" placeholder="Name" class="form-control">
+                  </div>  
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <div class="form-group">
+                    <input type="text" name="email" placeholder="Email" class="form-control">
+                  </div>  
+                </div>
+                <div class="col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <input class="form-control" type="text" name="subject" placeholder="SUbject">
+                  </div>
+                </div>
+                <div class="col-sm-12 col-xs-12"> 
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Message" rows="8"></textarea>
+                  </div>
+                </div>
+                <button class="btn btn-big">SUBMIT</button> 
+              </form>
+            </div>  
+          </div>
+        </div>  
+      </div>    
+  </section>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">UIBrush</h4>
+      </div>
+      <div class="modal-body">
+       <h3>CONTACT INFO</h3>
+       <p>Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout.Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout.Lorem Ipsum is simply dummy text of the printing.It is a lo by the readable content of a page when looking at its layout.Lorem Ipsum is simply dummy.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Download</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="container-fluid  footer">
+    <p>Copyright &copy; 2016 UIBrush</p>
+  </div>
+
+<script>
+  /*ajax call example*/
+  /*$( function() {
+  	var availableTags;
+  	$.ajax({
+      method: 'GET',
+      url: '/get_location_list',
+      success: function(res) {
+         availableTags = res;
+        $("#location").autocomplete({
+      	source: availableTags
+    });
+      },
+      error: function(res) {
+        alert("error")
+      }
+    });    
+  } );*/
+  </script>
