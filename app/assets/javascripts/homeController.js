@@ -1,25 +1,29 @@
-app.controller('homeController', function($scope,$http) {
+app.controller('homeController', function($scope,$http,$location) {
     $scope.getCategoryList = function(){
     	$http({
 		  method: 'GET',
-		  url: '/get_category_list'
+		  url: '/get_category_list',
+      headers: {'Content-Type': 'application/json'}
 		}).then(function successCallback(response) {
- 		    $scope.category = response.data;
+          console.log(response.data.category)
+  		    $scope.category = response.data.category;
 		  }, function errorCallback(response) {
 		  	console.log(response) 
 		});
     }
     $scope.locationData = function(data){
         data.location=$('#location').val();
-        console.log(data);
-        if (data.location && data.category) {
+         if (data.location && data.category) {
           $http({
           method: 'GET',
           url: '/get_full_details',
           headers: {'Content-Type': 'application/x-www-form-urlencoded'},
           params : data
           }).then(function successCallback(response) {
+            console.log("Dddddddddddddddddddddddddd")
+            console.log(response.data)
              $scope.full_details = response.data;
+             $location.path('/fulldetails')
           }, function errorCallback(response) {
             console.log(response) 
           }); 
@@ -39,6 +43,6 @@ app.controller('homeController', function($scope,$http) {
             console.log(response) 
          });
       }
-     $scope.getLocations();
+     /*$scope.getLocations();*/
 
 });

@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  get 'get_location_list' => 'home#get_location_list'
+  get 'get_category_list' => 'home#get_category_list'
+  get 'get_full_details'  => 'home#get_full_details'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'home#index'
-  get 'get_location_list' => 'home#get_location_list'
-  get 'get_category_list' => 'home#get_category_list'
-  get 'get_full_details'  => 'home#get_full_details'
+  get '*path' => 'home#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

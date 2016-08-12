@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'csv'
+
+CSV.foreach("db/csv_data/industries.csv") do |row|
+  Industry.find_or_create_by(name: row[0],address: row[1],contact: row[2],locations_id: row[3],categories_id: row[4])
+end

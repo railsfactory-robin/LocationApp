@@ -17,6 +17,7 @@
 //= require jquery-ui
 //= require angular.min
 //= require ui.bootstrap
+//= require angular-route
 //= require app
 //= require homeController
 //= require_tree .

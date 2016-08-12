@@ -1,5 +1,28 @@
-var app = angular.module('locationApp', ['ui.bootstrap']);
-	app.directive('autoComplete', function($timeout) {
+var app = angular.module('locationApp', ["ngRoute"]);
+app.config(function($routeProvider,$locationProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "home/content.html.erb"
+    })
+    .when("/fulldetails", {
+        templateUrl : "home/fulldetails.html.erb"
+    })
+    .when("/green", {
+        templateUrl : "green.htm"
+    })
+    .when("/blue", {
+        templateUrl : "blue.htm"
+    })
+    .otherwise({
+        templateUrl : "/asa"
+    });
+    // use the HTML5 History API
+    $locationProvider.html5Mode({
+	  enabled: true,
+	  requireBase: false
+	});
+});
+	/*app.directive('autoComplete', function($timeout) {
 	    return function(scope, iElement, iAttrs) {
 	            iElement.autocomplete({
 	                source: scope[iAttrs.uiItems],
@@ -10,7 +33,7 @@ var app = angular.module('locationApp', ['ui.bootstrap']);
 	                }
 	            });
 	    };
-	});
+	});*/
 	/*app.service('location',function($http,$q){
 
  		this.getLocations = function(){
