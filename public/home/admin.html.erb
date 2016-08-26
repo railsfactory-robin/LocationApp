@@ -1,0 +1,212 @@
+ <header class="admin-header">
+	<div class="container">
+		<div class="row ">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 logo">
+			<h2>LOOK Around</h2><h1>.</h1>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="navbar-example">
+				<nav class="navbar navbar-default pull-right">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="" ng-click="homepage();">HOME</a></li>
+						<li><a href="#about-us">ABOUT US</a></li>
+						<li><a href="#portfolio">PORTFOLIO</a></li>
+						<li><a href="#services">SERVICES</a></li>
+						<li><a href="" data-toggle="modal" data-target="#myModal">SIGN IN</a></li>
+					</ul>
+				</nav>  
+			</div>
+		</div>
+	</div> 
+</header>
+<section ng-controller="adminControl">
+ <div class="container-fluid nav-tab">
+ 		<div class="row clearfix">
+			<div class="col-md-4 tab-head {{add_location ? 'is-active':''}}" ng-click="swithToLocation();">
+				<div class="text-center">
+					<h4>ADD LOCATION</h4>
+				</div>
+			</div>
+			<div class="col-md-4 tab-head {{add_category ? 'is-active':''}}" ng-click="swithToCategory();">
+				<div class="text-center">
+					<h4>ADD CATEGORY</h4>
+				</div>
+			</div>
+			<div class="col-md-4 tab-head {{add_industry ? 'is-active':''}}" ng-click="swithToIndustry();">
+				<div class="text-center">
+					<h4>ADD INDUSTRY</h4>
+				</div>
+			</div>
+		</div>
+   </div>
+    <div class="container-fluid">
+	   <div class="row">
+   		 <div class="col-md-6">
+   		 <div ng-show="success_message" class="alert alert-success" style="margin-top:20px;">
+   		    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		 	 <strong>Success!</strong> {{message}}!.
+		</div>
+		 <div ng-show="error_message" class="alert alert-danger" style="margin-top: 20px;>
+		    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	 	 <strong>Error!</strong> {{message}}!.
+		</div>
+   		 <!--  This is for adding location -->
+	   		 <div class="location" ng-if="add_location">
+	   		 	<div class="sub-head">
+	   		 		<h3 class="no_margin_top">Add location details</h3>
+	   		 	</div>	
+	   		 	<div class="row">
+	   		 		<div class="form-group clearfix">
+		   		 		<div class="col-md-3"><label>Location</label></div>
+		   		 		<div class="col-md-9"><input id="searchTextField" ng-model="loc.place" googleplace ng-change="splitLoaction(loc.place);" type="text" name="" placeholder="Enter City Name" size="50" class="form-control" autocomplete="on"></div>
+		   		 	</div>
+	   		 	</div>
+	   		 	<div class="row">
+	   		 		<div class="form-group clearfix">
+		   		 		<div class="col-md-3"><label>City</label></div>
+		   		 		<div class="col-md-9"><input id="searchTextField" ng-model="loc.city" readonly="true" type="text" name="city" class="form-control"></div>
+		   		 	</div>
+	   		 	</div>
+	   		 	<div class="row">
+		   		 	<div class="form-group clearfix">
+		   		 		<div class="col-md-3"><label>State</label></div>
+		   		 		<div class="col-md-9"><input type="text" name="" ng-model="loc.state" readonly="true" class="form-control"></div>
+		   		 	</div>
+	   		 	</div>
+	   		 	<div class="row">
+		   		 	<div class="form-group clearfix">
+		   		 		<div class="col-md-3"><label>Country</label></div>
+		   		 		<div class="col-md-9"><input type="text" name="" ng-model="loc.country" readonly="true" class="form-control"></div>
+		   		 	</div>
+	   		 	</div>
+	   		 	<div class="row">
+		   		 	<div class="form-group clearfix">
+		   		 		<div class="col-md-4 col-md-offset-8">
+			   		 		<div class="pull-right">
+			   		 			<button class="btn btn-default">cancel</button>
+			   		 			<button class="btn btn-primary" ng-click="saveLocation(loc);">submit</button>
+			   		 		</div>
+		   		 		</div>
+		   		 	</div>
+	   		 	</div>
+	   		 </div>
+	   		 <!-- This is for adding category -->
+	   		  <div class="location" ng-if="add_category">
+	   		 	<div class="sub-head">
+	   		 		<h3 class="no_margin_top">Add category details</h3>
+	   		 	</div>
+	   		 	<div class="row">
+		   		 	<div class="form-group clearfix">
+		   		 		<div class="col-md-3"><label>Enter Category</label></div>
+		   		 		<div class="col-md-9"><input type="text" name="" ng-model="category.cat" class="form-control"></div>
+		   		 	</div>
+	   		 	</div>	
+	   		 	<div class="row">
+		   		 	<div class="form-group clearfix">
+		   		 		<div class="col-md-4 col-md-offset-8">
+			   		 		<div class="pull-right">
+			   		 			<button class="btn btn-default">cancel</button>
+			   		 			<button class="btn btn-primary" ng-click="addCategory(category)">submit</button>
+			   		 		</div>
+		   		 		</div>
+		   		 	</div>
+	   		 	</div>
+	   		 </div>
+	   		 <!-- This is for adding industry -->
+	   		  <div class="location" ng-if="add_industry">
+	   		 	<div class="sub-head">
+	   		 		<h3 class="no_margin_top">Add industry details</h3>
+	   		 	</div>
+   		 	 	<div class="row">
+	   		 	<div class="form-group clearfix">
+	   		 		<div class="col-md-3"><label>Industry Name</label></div>
+	   		 		<div class="col-md-9"><input type="text" name="" ng-model="ind_name" class="form-control"></div>
+	   		 	</div>
+	   		 	</div>
+	   		 	<div class="row">
+	   		 		<div class="form-group clearfix">
+	   		 		<div class="col-md-3"><label>Address</label></div>
+	   		 		<div class="col-md-9">
+	   		 			<textarea rows="4" class="form-control" ng-model="address"></textarea>
+	   		 		</div>
+	   		 	</div>
+	   		 	</div>	
+	   		 	<div class="row">
+	   		 		<div class="form-group clearfix">
+	   		 		<div class="col-md-3"><label>Contact number</label></div>
+	   		 		<div class="col-md-9"><input type="text" name="" ng-model="contacts" class="form-control"></div>
+	   		 	</div>
+	   		 	</div>
+	   		 	<div class="row">
+	   		 		<div class="form-group clearfix">
+	   		 		<div class="col-md-3"><label>Description</label></div>
+	   		 		<div class="col-md-9">
+	   		 			<textarea rows="4" class="form-control" ng-model="address"></textarea>
+	   		 		</div>
+	   		 	</div>
+	   		 	</div>	
+	   		 	<div class="row">
+	   		 		<div class="form-group clearfix">
+	   		 		<div class="col-md-3"><label>Upload Image</label></div>
+	   		 		<div class="col-md-9"><input type="file" name="" ng-model="image" class="form-control"></div>
+	   		 	</div>
+	   		 	</div>	
+	   		 	<div class="row">
+		   		 	<div class="form-group clearfix">
+		   		 		<div class="col-md-4 col-md-offset-8">
+			   		 		<div class="pull-right">
+			   		 			<button class="btn btn-default">cancel</button>
+			   		 			<button class="btn btn-primary">submit</button>
+			   		 		</div>
+		   		 		</div>
+		   		 	</div>
+	   		 	</div>
+	   		 </div>
+   		 </div>
+   	 	 <div class="col-md-6"></div>
+	   </div>
+    </div>
+</section>
+<style type="text/css">
+	.admin-header{
+		background: black;
+	}
+	.admin-header .logo{
+		padding-top:10px; 
+	}
+	.nav-tab{
+		background: #ccc;
+ 	}
+ 	.is-active{
+ 		background: #4CAF50;
+ 	}
+ 	.tab-head{
+ 		border: 1px solid black;
+ 		padding: 5px;
+ 	}
+ 	.location{
+ 		border: 1px solid gray;
+ 		background: #fca;
+ 		margin-top:20px;
+  	}
+  	.location .sub-head{
+  		border-bottom: 1px solid #ccc;
+  		background: #1ff;
+  		padding: 8px 0 8px 20px;
+   	}
+  	.no_margin_top{
+  		margin-top:0 !important;
+  	}
+  	.no_margin_bottom{
+  		margin-bottom:0 !important;
+  	}
+  	.no_margin{
+  		margin:0 !important;
+  	}
+  	.location .form-group {
+	    margin-bottom: 15px;
+	    margin: 8px 27px 8px 25px;
+	}
+	section{
+		min-height: 511px;
+	}
+</style>

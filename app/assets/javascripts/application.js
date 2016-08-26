@@ -18,6 +18,8 @@
 //= require angular.min
 //= require ui.bootstrap
 //= require angular-route
+//= require ngStorage.min
 //= require app
 //= require homeController
+//= require adminControl
 //= require_tree .

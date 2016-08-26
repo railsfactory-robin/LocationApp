@@ -8,16 +8,30 @@
 body {
   position: relative;
 }
-header{
+.header1{
 	width: 100%;
 	background-image: url("banner.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.header2{
+    width: 100%;
+    background-image: url("banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -200px;
+}
 .header-text{
 	margin: 190px auto 15px;
 }
-.location-search{
+.modal-dialog{
+	width: 450px;
+}
+.location-search2{
+    margin-bottom: 40px;
+    margin-top: 140px;
+}
+.location-search1{
 	margin-bottom: 85px;
 }
 .logo h2{
@@ -28,13 +42,13 @@ header{
 	color: #fff;
 	display: inline;
 }
-.location-search .form-control{
+.location-search1 .form-control{
 	height: 40px;
 }
-.location-search .form-control {
+.location-search1 .form-control {
     border-radius: 0;
 }
-.location-search .form-group:first-child .form-control{
+.location-search1 .form-group:first-child .form-control{
 	border-radius: 5px 0px 0px 5px;
 }
 .btn-download{
@@ -44,7 +58,7 @@ header{
  	padding: 9px 25px;
  	border-radius: 0 5px 5px 0px;
 }
-.location-search [class*="col-"] {
+.location-search1 [class*="col-"] {
     padding: 0;
 }
 .header-text h2{
@@ -107,6 +121,7 @@ header{
 .portfolio-wrapper{
 	background-color: #fff;
 	padding: 10px;
+	min-height: 70px;
 }
 .portfolio-main,.contact-us{
 	background-color: #f4f4f4;
@@ -116,7 +131,9 @@ header{
 }
 .portfolio{
 	margin-bottom: 20px;
-	position: relative;
+	border: 2px solid #ccc;
+    border-radius: 5px;
+	/*position: relative;*/
 }
 .service-box{
 	border: 1px solid;
@@ -214,7 +231,7 @@ header{
 	width: 100%;
 	position: absolute;
 	top: 0;
-	bottom: 55px;
+	bottom: 0;
 }
 .service-box:hover .mid-line{
 	border-color:#333;
@@ -259,3 +276,19 @@ header{
 .over-wrapper:hover {
     opacity: 0.7;
 }
+.img-wrapper{
+	position: relative;
+}
+.portfolio-wrapper h5{
+	display: inherit;
+    width: 80%;
+}
+.modal-body img{
+	width: 99.5%;
+}
+.modal-body p {
+    text-align: justify;
+    /* text-indent: 23px; */
+    line-height: 25px;
+    padding-top: 10px;
+} 

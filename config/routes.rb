@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'get_location_list' => 'home#get_location_list'
   get 'get_category_list' => 'home#get_category_list'
   get 'get_full_details'  => 'home#get_full_details'
+  get 'savelocation' => 'home#savelocation'
+  get 'savecategory' => 'home#savecategory'
+  get 'login' => 'home#login'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'home#index'
   get '*path' => 'home#index'
-  # Example of regular route:
+   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

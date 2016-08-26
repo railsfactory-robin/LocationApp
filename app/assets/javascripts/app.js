@@ -1,4 +1,4 @@
-var app = angular.module('locationApp', ["ngRoute"]);
+var app = angular.module('locationApp', ["ngRoute","ngStorage"]);
 app.config(function($routeProvider,$locationProvider) {
     $routeProvider
     .when("/", {
@@ -7,11 +7,11 @@ app.config(function($routeProvider,$locationProvider) {
     .when("/fulldetails", {
         templateUrl : "home/fulldetails.html.erb"
     })
-    .when("/green", {
-        templateUrl : "green.htm"
+    .when("/indivigual_details", {
+        templateUrl : "home/fullview.html.erb"
     })
-    .when("/blue", {
-        templateUrl : "blue.htm"
+    .when("/admin_home", {
+        templateUrl : "home/admin.html.erb"
     })
     .otherwise({
         templateUrl : "/asa"
@@ -21,6 +21,25 @@ app.config(function($routeProvider,$locationProvider) {
 	  enabled: true,
 	  requireBase: false
 	});
+});
+
+app.directive('googleplace', function() {
+    return {
+        require: 'ngModel',
+        link: function(scope, element, attrs, model) {
+            var options = {
+                types: [],
+                componentRestrictions: {}
+            };
+            scope.gPlace = new google.maps.places.Autocomplete(element[0], options);
+
+            google.maps.event.addListener(scope.gPlace, 'place_changed', function() {
+                scope.$apply(function() {
+                    model.$setViewValue(element.val());                
+                });
+            });
+        }
+    };
 });
 	/*app.directive('autoComplete', function($timeout) {
 	    return function(scope, iElement, iAttrs) {

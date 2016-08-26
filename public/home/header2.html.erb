@@ -1,0 +1,43 @@
+<header class="header2" id="home" ng-init="getLocations();">
+  <div class="head-menu">
+    <div class="container">
+      <div class="row ">
+      <div class="header-overlay"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 logo">
+          <h2>LOOK Around</h2><h1>.</h1>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="navbar-example">
+          <nav class="navbar navbar-default pull-right">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="" ng-click="homepage();">HOME</a></li>
+              <li><a href="#about-us">ABOUT US</a></li>
+              <li><a href="#portfolio">PORTFOLIO</a></li>
+              <li><a href="#services">SERVICES</a></li>
+              <li><a href="#contact-us">CONTACT US</a></li>
+            </ul>
+          </nav>  
+        </div>
+      </div>
+    </div>  
+  </div>  
+    <div class="container"> 
+       <div class="row location-search2">
+         <div class="col-sm-3 col-sm-offset-1 form-group">
+           <input ng-disabled="true" value="data.location" ng-model="data.location" class="form-control" type="text" name="location" placeholder="Enter City" id="location"/>
+         </div>
+         <div class="col-sm-3 form-group">
+        <select ng-disabled="true" ng-init="getCategoryList()" class="form-control" ng-model="data.category"  ng-change="locationData(data);">
+           <option value="">---Please select---</option>
+           <option ng-repeat="cat in category" value="{{cat.id}}">{{cat.name}}</option>
+         </select>       
+          </div>
+         <div class="col-sm-3 form-group">
+          <input type="text" ng-model="data.keyword" name="search" class="form-control" placeholder="Search Key" />
+         </div>
+         <div class="col-sm-2">
+          <button class="btn btn-download" ng-click="locationData(data)">Search</button>
+         </div>
+      </div>
+    </div>
+    
+  </header>
